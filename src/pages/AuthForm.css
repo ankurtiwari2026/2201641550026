@@ -1,0 +1,90 @@
+/* AuthForm.css - Professional Auth Form Styles */
+.auth-form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.auth-form {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.08), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  animation: pop-in 0.7s cubic-bezier(.4,0,.2,1);
+}
+.auth-form h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-align: center;
+}
+.auth-form input {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.2s;
+  outline: none;
+  background: #f9fafb;
+}
+.auth-form input:focus {
+  border-color: #2563eb;
+  background: #fff;
+}
+.auth-form button {
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.08);
+  transition: background 0.2s, transform 0.15s;
+}
+.auth-form button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1d4ed8 60%, #3b82f6 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+.auth-form button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.auth-form__error {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 7px;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0 0.7rem 0;
+  font-size: 1rem;
+  animation: fade-in 0.5s;
+}
+.auth-form__switch {
+  text-align: center;
+  font-size: 1rem;
+  color: #64748b;
+}
+.auth-form__switch a {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.auth-form__switch a:hover {
+  color: #1d4ed8;
+}
+@keyframes pop-in {
+  0% { transform: scale(0.95) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
